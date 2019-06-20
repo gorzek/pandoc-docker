@@ -1,6 +1,6 @@
-FROM haskell:8.0
+FROM tgolson/rpi-haskell:latest
 
-MAINTAINER James Gregory <james@jagregory.com>
+MAINTAINER James Huffman <gorzek@gmail.com>
 
 # install latex packages
 RUN apt-get update -y \
