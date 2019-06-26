@@ -1,8 +1,10 @@
-# Pandoc Docker Container
+# Pandoc Docker Container for armhf platforms
 
-[Docker](https://www.docker.io/) container for the source distribution of [Pandoc](http://johnmacfarlane.net/pandoc), with Latex tools installed.
+All credit to James Gregory for the original pandoc Dockerfile: https://github.com/jagregory/pandoc-docker
 
-    docker run jagregory/pandoc
+[Docker](https://www.docker.io/) container for the aptitude distribution of [Pandoc](http://johnmacfarlane.net/pandoc), with Latex tools installed.
+
+    docker run gorzek/pandoc-armhf
 
     pandoc [OPTIONS] [FILES]
     Input formats:  docbook, haddock, html, json, latex, markdown, markdown_github,
@@ -17,4 +19,4 @@
 
 A `/source` directory is created in the container, which can be mapped for use with relative file paths. Pandoc will always be run from the `/source` directory in the container.
 
-    docker run -v `pwd`:/source jagregory/pandoc -f markdown -t html5 myfile.md -o myfile.html
+    docker run -v `pwd`:/source gorzek/pandoc-armhf -f markdown -t html5 myfile.md -o myfile.html
